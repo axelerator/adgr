@@ -154,16 +154,6 @@ bool Scene::recievePhoton(const Vector3D& position, const Vector3D& power, const
         behav = s->getMaterial()->spinRoulette();
     switch (behav) {
         case (DIF_REFLECT):{// we want to find a point on the hemisphere, to determine a random direction
-//                            double angle1, angle2;
-//                            angle1 = (rand() / (RAND_MAX + 1.0)) * 2.0 * M_PI;
-//                            angle2 = (rand() / (RAND_MAX + 1.0)) * 2.0 * M_PI;
-// 
-//                            Vector3D newDirection( cos(angle1)*sin(angle2),
-//                                               cos(angle2),
-//                                               sin(angle1)*sin(angle2));
-//                            newDirection += rNormal;
-//                            newDirection.normalize();
-
                               // determine a random direction(localU) in the plane defined by normal
                               // choose a random ray
                               Vector3D rrayDir(0.11 - rNormal.x, -0.11 - rNormal.y, 0.02 - rNormal.z );
